@@ -1,0 +1,39 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+/**
+ * @template TKey of array-key
+ * @template TValue
+ */
+class {{ class }} extends JsonResource
+{
+    /** @var {{ model }} */
+    public $resource;
+
+    /**
+     * Create a new resource instance.
+     *
+     * @param {{ model }} $resource
+     * @return void
+     */
+    public function __construct({{ model }} $resource)
+    {
+        parent::__construct($resource);
+    }
+
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  Request  $request
+     * @return array<mixed>|Arrayable<TKey, TValue>|\JsonSerializable
+     */
+    public function toArray(Request $request): array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
+    {
+        return parent::toArray($request);
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "garbarczykfilip/laravel-commands",
+  "description": "A package with custom Laravel artisan commands.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Filip Garbarczyk",
+      "email": "garbarczyk.filip@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "illuminate/console": "^8.0|^9.0|^10.0|^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GarbarczykFilip\\LaravelCommands\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GarbarczykFilip\\LaravelCommands\\LaravelCommandsServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
